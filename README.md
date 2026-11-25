@@ -108,7 +108,7 @@ In the project folder:
 
 ```
 git submodule update --remote GOcontroll-Simulink
-git submodule update --init --recursive
+git -C GOcontroll-Simulink submodule update --init --recursive
 ```
 
 The first command fetches the newest blockset; the second puts the code base inside it on the
@@ -122,6 +122,9 @@ git commit -m "Update the GOcontroll blockset"
 
 Your project records which version of the blockset it uses, so an older project keeps building
 with the version it was made with until you update it.
+
+`git submodule status --recursive` shows the versions in use. To go back to the recorded
+version before you have committed the update: `git submodule update --init --recursive`.
 
 ## More information
 
