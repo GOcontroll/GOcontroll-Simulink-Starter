@@ -97,7 +97,7 @@ in the model.
 Moduline M1, L4, HMI1: send the newest build to the controller from the MATLAB command window:
 
 ```
-ManualUpload MyModel 192.168.1.19
+ManualUpload MyModel 192.168.19.85
 ```
 
 with the name of your model and the address of your controller.
