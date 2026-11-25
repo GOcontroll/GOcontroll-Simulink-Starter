@@ -1,0 +1,4 @@
+[submodule "GOcontroll-Simulink"]
+	path = GOcontroll-Simulink
+	url = https://github.com/GOcontroll/GOcontroll-Simulink.git
+	branch = main

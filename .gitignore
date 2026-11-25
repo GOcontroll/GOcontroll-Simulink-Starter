@@ -1,0 +1,11 @@
+# Build output of the GOcontroll Simulink blockset
+/build/
+/slprj/
+/*_generated_code/
+*.slxc
+
+# MATLAB and Simulink working files
+*.autosave
+*.asv
+~*
+*.map
