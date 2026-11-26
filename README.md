@@ -27,15 +27,23 @@ MyProject/                      this repository: your project
 
 - **MATLAB R2023b or later** with Simulink, Embedded Coder, MATLAB Coder and Simulink Coder.
 - **Git.**
-- **A compiler**, with its `bin` folder on the system `PATH`:
+- **A compiler** for the controller. Install it once per computer, after step 2 below, with
+  one command in the MATLAB Command Window:
 
-  | For | Compiler | Command that must work in a terminal |
+  | For | Command | Installs |
   |---|---|---|
-  | Moduline S1 | Arm GNU Toolchain, bare metal | `arm-none-eabi-gcc --version` |
-  | Moduline M1, L4, HMI1 | Arm GNU Toolchain for 64 bit Linux | `aarch64-none-linux-gnu-gcc --version` |
+  | Moduline S1 | `GOcontrollInstallCompilers S1` | Arm GNU Toolchain arm-none-eabi 14.2.rel1 (about 300 MB, from Arm) |
+  | Moduline M1, L4, HMI1 | `GOcontrollInstallCompilers Linux` | GCC 9.2-2019.12 aarch64-none-linux-gnu (about 650 MB) |
+  | Moduline M1, L4, HMI1, *Compiler* = Zig | `GOcontrollInstallCompilers Zig` | Zig 0.14.1 (about 80 MB) |
 
-  Restart MATLAB after changing `PATH`. For the Linux controllers Zig can be used instead of
-  GCC; choose it under *GOcontroll options > Compiler*.
+  `GOcontrollInstallCompilers all` installs all three; `GOcontrollInstallCompilers` alone shows
+  what is installed. These are the versions the blockset is tested with. They go to a folder of
+  your own user (`%LOCALAPPDATA%\GOcontroll	c` on Windows), the build finds them there, and
+  they stay when you update the blockset: nothing has to be added to `PATH`.
+
+  A compiler you installed yourself also works when its `bin` folder is on the system `PATH`
+  (restart MATLAB after changing `PATH`); a compiler installed with the command above is used
+  first.
 
 ## 1. Get the project
 
