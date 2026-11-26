@@ -38,7 +38,7 @@ MyProject/                      this repository: your project
 
   `GOcontrollInstallCompilers all` installs all three; `GOcontrollInstallCompilers` alone shows
   what is installed. These are the versions the blockset is tested with. They go to a folder of
-  your own user (`%LOCALAPPDATA%\GOcontroll	c` on Windows), the build finds them there, and
+  your own user (`%LOCALAPPDATA%\GOcontroll\tc` on Windows), the build finds them there, and
   they stay when you update the blockset: nothing has to be added to `PATH`.
 
   A compiler you installed yourself also works when its `bin` folder is on the system `PATH`
